@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Your legacy Node 14 application
+  app:
+    image: node:14-alpine
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    command: npm start
+    ports:
+      - "3000:3000"
+    environment:
+      # Connect to OmniRoute over the Docker container network
+      - OMNIROUTE_URL=http://omniroute:20128/v1
+    depends_on:
+      - omniroute
+
+  # OmniRoute AI Gateway on Node 24
+  omniroute:
+    image: node:24-alpine
+    command: sh -c "npm install -g omniroute && omniroute"
+    ports:
+      - "20128:20128"
+    volumes:
+      - omniroute-data:/root/.omniroute
+
+volumes:
+  omniroute-data:
