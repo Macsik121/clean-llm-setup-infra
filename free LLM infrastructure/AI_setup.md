@@ -13,11 +13,13 @@ the points included are:
 ## Instructions
 
 ### 1. Nekobox
-- install nekobox through script - chmod +x install.sh && ./install.sh && nekobox
-(curl -fsSL https://your-link-to-script/install.sh | bash)
+Firstly, you need to install nekobox. Install nekobox through command:
+
+- su - && cd /home/<username>/path/to/files; chmod +x install.sh && ./install.sh && nekobox (curl -fsSL https://your-link-to-script/install.sh | bash)
+
 
 ### 2. Omniroute
-- check if node.js version is correct(22-24). if yes, go on.
+- check if node.js version is correct(22-24). if yes, go on. (node -v)
 - if not, install it in a container
 - run "npm i -g omniroute"
 - complete tifrst auth step
