@@ -4,8 +4,8 @@
 
 добавь в мои существующие файлы эти правила и проверь на соответствие всем этим правилам.
 
-```json
-settings.json: {
+settings.json:
+```json {
   "hooks": {
     "SubagentStop": [
       {
@@ -41,8 +41,8 @@ settings.json: {
 }
 ```
 
-```json
 settings.local.json:
+```json
 {
   "permissions": {
     "allow": [
@@ -111,8 +111,11 @@ $env:CLAUDE_CODE_PERMISSION_MODE = "default"
 Write-ColorOutput "Environment configured:" "Green"
 Write-Host "  ANTHROPIC_MODEL    = $selectedModel"
 Write-Host "  ANTHROPIC_BASE_URL = $($env:ANTHROPIC_BASE_URL)"
+```
 
 в .claude/settings.json указать:
+
+```json
 {
 "switchModelsOnFlag": false,
 "modelOverrides": {
