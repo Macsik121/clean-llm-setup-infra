@@ -4,7 +4,7 @@
 
 добавь в мои существующие файлы эти правила и проверь на соответствие всем этим правилам.
 
-json```
+```json
 settings.json: {
   "hooks": {
     "SubagentStop": [
@@ -41,7 +41,7 @@ settings.json: {
 }
 ```
 
-json```
+```json
 settings.local.json:
 {
   "permissions": {
@@ -85,7 +85,7 @@ settings.local.json:
 
 переменные окружения в скрипте:
 
-powershell```
+```powershell
 $env:ANTHROPIC_AUTH_TOKEN          = $authToken
 $env:ANTHROPIC_BASE_URL            = "$($script:OMNIROUTE_URL)/v1"
 $env:ANTHROPIC_MODEL               = $selectedModel
