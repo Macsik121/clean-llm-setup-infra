@@ -3,6 +3,8 @@
 ----------------------------------
 
 добавь в мои существующие файлы эти правила и проверь на соответствие всем этим правилам.
+
+json```
 settings.json: {
   "hooks": {
     "SubagentStop": [
@@ -37,7 +39,9 @@ settings.json: {
   "skipWorkflowUsageWarning": true,
   "theme": "dark"
 }
+```
 
+json```
 settings.local.json:
 {
   "permissions": {
@@ -77,9 +81,11 @@ settings.local.json:
     ]
   }
 }
+```
 
 переменные окружения в скрипте:
 
+powershell```
 $env:ANTHROPIC_AUTH_TOKEN          = $authToken
 $env:ANTHROPIC_BASE_URL            = "$($script:OMNIROUTE_URL)/v1"
 $env:ANTHROPIC_MODEL               = $selectedModel
@@ -116,6 +122,7 @@ Write-Host "  ANTHROPIC_BASE_URL = $($env:ANTHROPIC_BASE_URL)"
 },
 model: $selectedModel
 }
+```
 
 Сделай упор на работу со скриптом - переменные окружения, которые можно включить в скрипт - добавь необходимые. Те, которые нельзя - установи в settings*.json. Выдай все необходимые файлы с исправлениями(скрипт неполный, у него - только переменные окружения).
 
